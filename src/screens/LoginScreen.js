@@ -16,7 +16,7 @@ const registerHandler = () => {
   console.log("Register button clicked...");
 };
 
-function LoginScreen() {
+function LoginScreen({ navigation }) {
   return (
     <ImageBackground
       source={require("../assets/gradientBackground.png")}
@@ -29,9 +29,12 @@ function LoginScreen() {
           source={require("../assets/womanIcon.png")}
         />
       </View>
-      <TouchableOpacity onPress={loginHandler} style={styles.loginButton}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate("Home", { component: "HomeScreen" })}
+        style={styles.loginButton}
+      >
         <View>
-          <Text style={styles.loginText}>Log In</Text>
+          <Text style={styles.loginText}> Log In </Text>
         </View>
       </TouchableOpacity>
       <View style={styles.registerButton}>

@@ -4,16 +4,16 @@ import TabNavigator from "./src/config/TabNavigator";
 import { NavigationContainer } from "@react-navigation/native";
 import StackNavigator from "./src/config/StackNavigator";
 
-import LoginScreen from "./src/screens/LoginScreen";
+import { BottomNavigation } from "react-native-paper";
 
-class App extends React.Component {
+class Home extends React.Component {
   render() {
     return (
       <NavigationContainer>
-        <TabNavigator />
+        <StackNavigator />
       </NavigationContainer>
     );
   }
 }
 
-export default App;
+export default Home;
